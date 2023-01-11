@@ -1,0 +1,631 @@
+docomputing@DO:~$ git --version
+git version 2.34.1
+docomputing@DO:~$ ls- al ~/.gitconfig
+Command 'ls-' not found, did you mean:
+  command 'lsw' from deb suckless-tools (46-1)
+  command 'lsh' from deb lsh-client (2.1-13)
+  command 'lsm' from deb lsm (1.0.4-2)
+  command 'ls' from deb coreutils (8.32-4.1ubuntu1)
+  command 'lsc' from deb livescript (1.6.1+dfsg-2)
+Try: sudo apt install <deb name>
+docomputing@DO:~$ ls -al ~/.gitconfig
+-rw-r--r-- 1 docomputing Notes 44 Jan 10 20:08 /home/docomputing/.gitconfig
+docomputing@DO:~$ ls -al ~/.config/
+total 72
+drwx------ 15 docomputing Notes       4096 Jan  3 03:51 .
+drwxr-x--- 20 docomputing Notes       4096 Jan 10 20:08 ..
+drwx------  2 docomputing Notes       4096 Jan 10 14:40 dconf
+drwx------  2 docomputing docomputing 4096 Jan  2 21:09 enchant
+drwx------  2 docomputing docomputing 4096 Jan  2 21:06 eog
+drwx------  3 docomputing Notes       4096 Jan  2 17:54 evolution
+drwxr-xr-x  2 docomputing docomputing 4096 Jan  2 21:10 gedit
+drwx------  3 docomputing Notes       4096 Jan  2 17:55 gnome-control-center
+-rw-rw-r--  1 docomputing Notes          3 Jan  2 17:55 gnome-initial-setup-done
+drwx------  3 docomputing docomputing 4096 Jan  3 03:51 gnome-session
+drwxr-xr-x  2 docomputing Notes       4096 Jan  2 17:54 goa-1.0
+-rw-rw-r--  1 docomputing Notes          0 Jan  2 17:54 .gsd-keyboard.settings-ported
+drwx------  2 docomputing Notes       4096 Jan 10 14:33 gtk-3.0
+drwx------  3 docomputing Notes       4096 Jan  2 17:54 ibus
+drwxr-xr-x  2 docomputing Notes       4096 Jan  2 17:54 nautilus
+drwx------  2 docomputing Notes       4096 Jan  2 17:55 pulse
+drwx------  2 docomputing Notes       4096 Jan  2 17:55 update-notifier
+-rw-------  1 docomputing Notes        633 Jan  2 17:54 user-dirs.dirs
+-rw-rw-r--  1 docomputing Notes          5 Jan  2 17:54 user-dirs.locale
+docomputing@DO:~$ ls
+Case             Casestudy2.txt  Documents  Jane   Music  Pictures  README.md  snap       Tom
+Casestudy22.txt  Desktop         Downloads  Linux  Notes  Public    Research   Templates  Videos
+docomputing@DO:~$ mkdir edureka
+docomputing@DO:~$ cd edureka
+docomputing@DO:~/edureka$ mkdir myproject
+docomputing@DO:~/edureka$ ls
+myproject
+docomputing@DO:~/edureka$ ls -al
+total 12
+drwxr-xr-x  3 docomputing Notes 4096 Jan 11 02:06 .
+drwxr-x--- 21 docomputing Notes 4096 Jan 11 02:06 ..
+drwxr-xr-x  2 docomputing Notes 4096 Jan 11 02:06 myproject
+docomputing@DO:~/edureka$ mkdir .git
+docomputing@DO:~/edureka$ ls -al
+total 16
+drwxr-xr-x  4 docomputing Notes 4096 Jan 11 02:06 .
+drwxr-x--- 21 docomputing Notes 4096 Jan 11 02:06 ..
+drwxr-xr-x  2 docomputing Notes 4096 Jan 11 02:06 .git
+drwxr-xr-x  2 docomputing Notes 4096 Jan 11 02:06 myproject
+docomputing@DO:~/edureka$ ls -al .git
+total 8
+drwxr-xr-x 2 docomputing Notes 4096 Jan 11 02:06 .
+drwxr-xr-x 4 docomputing Notes 4096 Jan 11 02:06 ..
+docomputing@DO:~/edureka$ git config --system user.name edureka
+error: could not lock config file /etc/gitconfig: Permission denied
+docomputing@DO:~/edureka$ cd .git
+docomputing@DO:~/edureka/.git$ mkdir config
+docomputing@DO:~/edureka/.git$ cd edureka
+bash: cd: edureka: No such file or directory
+docomputing@DO:~/edureka/.git$ cd
+docomputing@DO:~$ cd edureka
+docomputing@DO:~/edureka$ ls -al .git
+total 12
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:08 .
+drwxr-xr-x 4 docomputing Notes 4096 Jan 11 02:06 ..
+drwxr-xr-x 2 docomputing Notes 4096 Jan 11 02:08 config
+docomputing@DO:~/edureka$ git config --system user.name edureka
+error: could not lock config file /etc/gitconfig: Permission denied
+docomputing@DO:~/edureka$ cd ..
+docomputing@DO:~$ git config --system user.name edureka
+error: could not lock config file /etc/gitconfig: Permission denied
+docomputing@DO:~$ git config --global user.name edureka_global
+docomputing@DO:~$ git config --global -l
+user.email=edureka.com
+user.name=edureka_global
+docomputing@DO:~$ git config -- global user.email edureka_global@live.in
+error: key does not contain a section: global
+docomputing@DO:~$ git config --global user.email edureka_global@live.in
+docomputing@DO:~$ git config --global -l
+user.email=edureka_global@live.in
+user.name=edureka_global
+docomputing@DO:~$ cd edureka 
+docomputing@DO:~/edureka$ git config --global user.name edureka_global
+docomputing@DO:~/edureka$ git config --global -l
+user.email=edureka_global@live.in
+user.name=edureka_global
+docomputing@DO:~/edureka$ git config --global user.email edureka_global@live.in
+docomputing@DO:~/edureka$ git config --global -l
+user.email=edureka_global@live.in
+user.name=edureka_global
+docomputing@DO:~/edureka$ pwd
+/home/docomputing/edureka
+docomputing@DO:~/edureka$ ls
+myproject
+docomputing@DO:~/edureka$ cd myproject/
+docomputing@DO:~/edureka/myproject$ cd
+docomputing@DO:~$ cd myproject/
+bash: cd: myproject/: No such file or directory
+docomputing@DO:~$ cd edureka/
+docomputing@DO:~/edureka$ cd myproject/
+docomputing@DO:~/edureka/myproject$ ls
+docomputing@DO:~/edureka/myproject$ ls -al
+total 8
+drwxr-xr-x 2 docomputing Notes 4096 Jan 11 02:06 .
+drwxr-xr-x 4 docomputing Notes 4096 Jan 11 02:06 ..
+docomputing@DO:~/edureka/myproject$ cd ..
+docomputing@DO:~/edureka$ pwd
+/home/docomputing/edureka
+docomputing@DO:~/edureka$ ls -al
+total 16
+drwxr-xr-x  4 docomputing Notes 4096 Jan 11 02:06 .
+drwxr-x--- 21 docomputing Notes 4096 Jan 11 02:15 ..
+drwxr-xr-x  3 docomputing Notes 4096 Jan 11 02:08 .git
+drwxr-xr-x  2 docomputing Notes 4096 Jan 11 02:06 myproject
+docomputing@DO:~/edureka$ git config --local user.email edureka@live.in
+docomputing@DO:~/edureka$ git config --local user.name edureka
+docomputing@DO:~/edureka$ git config user.email edureka@live.in
+docomputing@DO:~/edureka$ git config user.name edureka
+docomputing@DO:~/edureka$ pwd
+/home/docomputing/edureka
+docomputing@DO:~/edureka$ git config --local -l
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/DCu5521/edureka-transaction-api.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.email=edureka@live.in
+user.name=edureka
+docomputing@DO:~/edureka$ git config -l
+user.email=edureka_global@live.in
+user.name=edureka_global
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/DCu5521/edureka-transaction-api.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.email=edureka@live.in
+user.name=edureka
+docomputing@DO:~/edureka$ git config -l --help
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+docomputing@DO:~/edureka$ git config --list
+user.email=edureka_global@live.in
+user.name=edureka_global
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/DCu5521/edureka-transaction-api.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.email=edureka@live.in
+user.name=edureka
+docomputing@DO:~/edureka$ git config -l
+user.email=edureka_global@live.in
+user.name=edureka_global
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/DCu5521/edureka-transaction-api.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.email=edureka@live.in
+user.name=edureka
+docomputing@DO:~/edureka$ git config system -l
+error: key does not contain a section: system
+docomputing@DO:~/edureka$ git config --system -l
+fatal: unable to read config file '/etc/gitconfig': No such file or directory
+docomputing@DO:~/edureka$ git config --system -l
+fatal: unable to read config file '/etc/gitconfig': No such file or directory
+docomputing@DO:~/edureka$ git config user.name
+edureka
+docomputing@DO:~/edureka$ git config --system user.name
+docomputing@DO:~/edureka$ git config --get-regexp user.*
+user.email edureka_global@live.in
+user.name edureka_global
+user.email edureka@live.in
+user.name edureka
+docomputing@DO:~/edureka$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+docomputing@DO:~/edureka$ cd ..
+docomputing@DO:~$ rm -rf edureka/
+docomputing@DO:~$ mkdir edureka
+docomputing@DO:~$ mkdir myproject
+docomputing@DO:~$ cd myproject/
+docomputing@DO:~/myproject$ ls
+docomputing@DO:~/myproject$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/docomputing/myproject/.git/
+docomputing@DO:~/myproject$ ls -al
+total 12
+drwxr-xr-x  3 docomputing Notes 4096 Jan 11 02:27 .
+drwxr-x--- 22 docomputing Notes 4096 Jan 11 02:26 ..
+drwxr-xr-x  7 docomputing Notes 4096 Jan 11 02:27 .git
+docomputing@DO:~/myproject$ ls -al .git/
+total 40
+drwxr-xr-x 7 docomputing Notes 4096 Jan 11 02:27 .
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:27 ..
+drwxr-xr-x 2 docomputing Notes 4096 Jan 11 02:27 branches
+-rw-r--r-- 1 docomputing Notes   92 Jan 11 02:27 config
+-rw-r--r-- 1 docomputing Notes   73 Jan 11 02:27 description
+-rw-r--r-- 1 docomputing Notes   23 Jan 11 02:27 HEAD
+drwxr-xr-x 2 docomputing Notes 4096 Jan 11 02:27 hooks
+drwxr-xr-x 2 docomputing Notes 4096 Jan 11 02:27 info
+drwxr-xr-x 4 docomputing Notes 4096 Jan 11 02:27 objects
+drwxr-xr-x 4 docomputing Notes 4096 Jan 11 02:27 refs
+docomputing@DO:~/myproject$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+docomputing@DO:~/myproject$ git config user.name edureka
+docomputing@DO:~/myproject$ git config user.email edureka@live.in
+docomputing@DO:~/myproject$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[user]
+	name = edureka
+	email = edureka@live.in
+docomputing@DO:~/myproject$ ls
+docomputing@DO:~/myproject$ touch test.txt
+docomputing@DO:~/myproject$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+docomputing@DO:~/myproject$ git add test.txt
+docomputing@DO:~/myproject$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   test.txt
+
+docomputing@DO:~/myproject$ git rm test.txt
+error: the following file has changes staged in the index:
+    test.txt
+(use --cached to keep the file, or -f to force removal)
+docomputing@DO:~/myproject$ git rm --cached test.txt
+rm 'test.txt'
+docomputing@DO:~/myproject$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+docomputing@DO:~/myproject$ git add test.txt
+docomputing@DO:~/myproject$ git commit -m "This is a sample commit."
+[master (root-commit) 8204402] This is a sample commit.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+docomputing@DO:~/myproject$ git status
+On branch master
+nothing to commit, working tree clean
+docomputing@DO:~/myproject$ ls
+test.txt
+docomputing@DO:~/myproject$ echo "Hello World" >> test.txt
+docomputing@DO:~/myproject$ ls
+test.txt
+docomputing@DO:~/myproject$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+docomputing@DO:~/myproject$ git add test. txt
+fatal: pathspec 'test.' did not match any files
+docomputing@DO:~/myproject$ git add test.txt
+docomputing@DO:~/myproject$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   test.txt
+
+docomputing@DO:~/myproject$ git commit -m "The first tracked commit"
+[master 39969a0] The first tracked commit
+ 1 file changed, 1 insertion(+)
+docomputing@DO:~/myproject$ git status
+On branch master
+nothing to commit, working tree clean
+docomputing@DO:~/myproject$ pwd
+/home/docomputing/myproject
+docomputing@DO:~/myproject$ ls
+test.txt
+docomputing@DO:~/myproject$ git info
+git: 'info' is not a git command. See 'git --help'.
+
+The most similar commands are
+	init
+	mailinfo
+docomputing@DO:~/myproject$ git --help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+docomputing@DO:~/myproject$ git log
+commit 39969a04ec3fe0b749bf62858ab1e9c909f5e21a (HEAD -> master)
+Author: edureka <edureka@live.in>
+Date:   Wed Jan 11 02:34:55 2023 -0600
+
+    The first tracked commit
+
+commit 8204402cb369bece25c832267a62aff45d7178f9
+Author: edureka <edureka@live.in>
+Date:   Wed Jan 11 02:33:16 2023 -0600
+
+    This is a sample commit.
+docomputing@DO:~/myproject$ cd ..
+docomputing@DO:~$ ls
+Case             Casestudy2.txt  Documents  edureka  Linux  myproject  Pictures  README.md  snap       Tom
+Casestudy22.txt  Desktop         Downloads  Jane     Music  Notes      Public    Research   Templates  Videos
+docomputing@DO:~$ cd edureka/
+docomputing@DO:~/edureka$ git clone https://github.com/DCu5521/edureka-transaction-api.git
+Cloning into 'edureka-transaction-api'...
+warning: You appear to have cloned an empty repository.
+docomputing@DO:~/edureka$ ls
+edureka-transaction-api
+docomputing@DO:~/edureka$ ls
+edureka-transaction-api
+docomputing@DO:~/edureka$ cd edureka-transaction-api/
+docomputing@DO:~/edureka/edureka-transaction-api$ ls
+docomputing@DO:~/edureka/edureka-transaction-api$ git branch
+docomputing@DO:~/edureka/edureka-transaction-api$ git branch status
+fatal: Not a valid object name: 'main'.
+docomputing@DO:~/edureka/edureka-transaction-api$ git branch show
+fatal: Not a valid object name: 'main'.
+docomputing@DO:~/edureka/edureka-transaction-api$ git remote
+origin
+docomputing@DO:~/edureka/edureka-transaction-api$ ls 
+docomputing@DO:~/edureka/edureka-transaction-api$ ls -l
+total 0
+docomputing@DO:~/edureka/edureka-transaction-api$ ls -al
+total 12
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:39 .
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:39 ..
+drwxr-xr-x 7 docomputing Notes 4096 Jan 11 02:39 .git
+docomputing@DO:~/edureka/edureka-transaction-api$ ls -l
+total 0
+docomputing@DO:~/edureka/edureka-transaction-api$ ls
+docomputing@DO:~/edureka/edureka-transaction-api$ ls -al
+total 12
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:39 .
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:39 ..
+drwxr-xr-x 7 docomputing Notes 4096 Jan 11 02:39 .git
+docomputing@DO:~/edureka/edureka-transaction-api$ ls -l
+total 0
+docomputing@DO:~/edureka/edureka-transaction-api$ vi README.mdown
+docomputing@DO:~/edureka/edureka-transaction-api$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+docomputing@DO:~/edureka/edureka-transaction-api$ git add *
+fatal: pathspec '*' did not match any files
+docomputing@DO:~/edureka/edureka-transaction-api$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+docomputing@DO:~/edureka/edureka-transaction-api$ git add README.mdown
+fatal: pathspec 'README.mdown' did not match any files
+docomputing@DO:~/edureka/edureka-transaction-api$ ls -l
+total 0
+docomputing@DO:~/edureka/edureka-transaction-api$ ls
+docomputing@DO:~/edureka/edureka-transaction-api$ ls -al
+total 12
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:56 .
+drwxr-xr-x 3 docomputing Notes 4096 Jan 11 02:39 ..
+drwxr-xr-x 7 docomputing Notes 4096 Jan 11 02:58 .git
+docomputing@DO:~/edureka/edureka-transaction-api$ touch README.md
+docomputing@DO:~/edureka/edureka-transaction-api$ nano README.md
+docomputing@DO:~/edureka/edureka-transaction-api$ nano README.md
+docomputing@DO:~/edureka/edureka-transaction-api$ nano README.md
+docomputing@DO:~/edureka/edureka-transaction-api$ git add *
+docomputing@DO:~/edureka/edureka-transaction-api$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+docomputing@DO:~/edureka/edureka-transaction-api$ git commit -m "adding this file for case study for api stage"
+[main (root-commit) 8aee700] adding this file for case study for api stage
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+docomputing@DO:~/edureka/edureka-transaction-api$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+docomputing@DO:~/edureka/edureka-transaction-api$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/DCu5521/edureka-transaction-api.git'
+docomputing@DO:~/edureka/edureka-transaction-api$ git push origin
+Username for 'https://github.com': techmcunetworks33@gmail.com
+Password for 'https://techmcunetworks33@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/DCu5521/edureka-transaction-api.git/'
+docomputing@DO:~/edureka/edureka-transaction-api$ git branch
+* main
+docomputing@DO:~/edureka/edureka-transaction-api$ git branch dev
+docomputing@DO:~/edureka/edureka-transaction-api$ git branch
+  dev
+* main
+docomputing@DO:~/edureka/edureka-transaction-api$ git checkout dev
+Switched to branch 'dev'
+docomputing@DO:~/edureka/edureka-transaction-api$ git branch
+* dev
+  main
+docomputing@DO:~/edureka/edureka-transaction-api$ git diff
+docomputing@DO:~/edureka/edureka-transaction-api$ git status
+On branch dev
+nothing to commit, working tree clean
+docomputing@DO:~/edureka/edureka-transaction-api$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+docomputing@DO:~/edureka/edureka-transaction-api$ git checkout main
+Switched to branch 'main'
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+docomputing@DO:~/edureka/edureka-transaction-api$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+docomputing@DO:~/edureka/edureka-transaction-api$ nano.README.md
+nano.README.md: command not found
+docomputing@DO:~/edureka/edureka-transaction-api$ nano README.md
+docomputing@DO:~/edureka/edureka-transaction-api$ em README.md
+em: command not found
+docomputing@DO:~/edureka/edureka-transaction-api$ en README.md
+en: command not found
+docomputing@DO:~/edureka/edureka-transaction-api$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+docomputing@DO:~/edureka/edureka-transaction-api$ git diff
+diff --git a/README.md b/README.md
+index b88489f..0b4dd9b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,3 @@
++Testing
+ This is for the case study project.
+ 
+docomputing@DO:~/edureka/edureka-transaction-api$ git diff README.md
+diff --git a/README.md b/README.md
+index b88489f..0b4dd9b 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,3 @@
++Testing
+ This is for the case study project.
+ 
+docomputing@DO:~/edureka/edureka-transaction-api$ git log
+commit 8aee7007398796b5c074c45b6aa9c971a9458844 (HEAD -> main, dev)
+Author: edureka_global <edureka_global@live.in>
+Date:   Wed Jan 11 03:04:11 2023 -0600
+
+    adding this file for case study for api stage
+docomputing@DO:~/edureka/edureka-transaction-api$ 
