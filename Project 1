@@ -553,12 +553,6 @@ nothing to commit, working tree clean
 docomputing@DO:~/edureka/edureka-transaction-api$ git push origin master
 error: src refspec master does not match any
 error: failed to push some refs to 'https://github.com/DCu5521/edureka-transaction-api.git'
-docomputing@DO:~/edureka/edureka-transaction-api$ git push origin
-Username for 'https://github.com': techmcunetworks33@gmail.com
-Password for 'https://techmcunetworks33@gmail.com@github.com': 
-remote: Support for password authentication was removed on August 13, 2021.
-remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
-fatal: Authentication failed for 'https://github.com/DCu5521/edureka-transaction-api.git/'
 docomputing@DO:~/edureka/edureka-transaction-api$ git branch
 * main
 docomputing@DO:~/edureka/edureka-transaction-api$ git branch dev
